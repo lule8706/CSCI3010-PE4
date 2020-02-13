@@ -1,4 +1,3 @@
-int ** MakeMatrix () {
 int ** CreateBoard () {
   int **answer = new int*[3];
 
@@ -10,8 +9,6 @@ int ** CreateBoard () {
 }
 
 int main(int argc, char const *argv[]) {
-  int **board = MakeMatrix();
-   
   int **board = CreateBoard();
 
   return 0;

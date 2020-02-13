@@ -8,6 +8,30 @@ int ** CreateBoard () {
   return answer;
 }
 
+/**
+  Displays 3x3 tic-tac-toe board.
+
+  @param board 3x3 matrix containing int values 0-2 representing tic-tac-toe symbols.
+*/
+void DisplayBoard(int **board) {
+
+  for (int i = 0; i < 3; i++) {
+
+    for (int j = 0; j < 3; j++) {
+
+      if (board[i][j] == 0) { // 0 represents empty
+        std::cout << "~";
+      } else if (board[i][j] == 1) { // 1 represents X
+        std::cout << "X";
+      } else { // 2 or any other numbers represent O
+        std::cout << "O";
+      }
+    }
+
+    std::cout << std::endl;
+  }
+}
+
 int main(int argc, char const *argv[]) {
   int **board = CreateBoard();
 

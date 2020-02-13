@@ -1,4 +1,5 @@
 int ** MakeMatrix () {
+int ** CreateBoard () {
   int **answer = new int*[3];
 
   for (int i = 0; i < 3; i++) {
@@ -11,5 +12,7 @@ int ** MakeMatrix () {
 int main(int argc, char const *argv[]) {
   int **board = MakeMatrix();
    
+  int **board = CreateBoard();
+
   return 0;
 }

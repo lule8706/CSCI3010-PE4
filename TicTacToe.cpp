@@ -1,10 +1,27 @@
+/**
+Lukas Leibfried, Griffen Cook
+PE4
+This program allows users to play a game of tic-tac-toe.
+*/
+
 #include <iostream>
 
-int ** CreateBoard () {
-  int **answer = new int*[3];
+/**
+  Makes a new empty 3x3 board.
 
-  for (int i = 0; i < 3; i++) {
+  @return New empty 3x3 board
+*/
+int ** CreateBoard () {
+  int **answer = new int*[3]; // Allocates array of int arrays.
+
+  for (int i = 0; i < 3; i++) { // Allocates each array in int array.
 	  answer[i] = new int[3];
+  }
+
+  for (int row = 0; row < 3; row++) { // Sets each space in array to empty.
+    for (int col = 0; col < 3; col++) {
+      answer[row][col] = 0;
+    }
   }
 
   return answer;
@@ -69,15 +86,15 @@ void GetPlayerChoice(int *choice){
 
 int main(int argc, char const *argv[]) {
   int **board = CreateBoard();
-	
+
   int turn_count = 0;
-	
+
   //The choice array is used to store user input
   int *choice = new int[2];
-  
+
   //uses turn count to run for 9 turns
   while(turn_count < 9){
-	  int *choice = new int[2];
+	  choice = new int[2];
 	  DisplayBoard(board);
 	  //for 0 through 8 turn_count % 2 will return 0 for 0, 2, 4, 6, 8 aka player ones turn, and 1 for player two's turn
 	  //By adding one to this number we can accurately express who's turn it is
@@ -86,6 +103,8 @@ int main(int argc, char const *argv[]) {
 	  PlaceMarker(choice, (turn_count % 2) + 1, board);
 	  turn_count++;
   }
+
+  DisplayBoard(board);
 
   return 0;
 }

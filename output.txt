@@ -1,0 +1,75 @@
+~~~
+~~~
+~~~
+Player1's turn:
+what row would you like?
+0
+what column would you like?
+0
+X~~
+~~~
+~~~
+Player2's turn:
+what row would you like?
+0
+what column would you like?
+1
+XO~
+~~~
+~~~
+Player1's turn:
+what row would you like?
+1
+what column would you like?
+1
+XO~
+~X~
+~~~
+Player2's turn:
+what row would you like?
+2
+what column would you like?
+2
+XO~
+~X~
+~~O
+Player1's turn:
+what row would you like?
+1
+what column would you like?
+2
+XO~
+~XX
+~~O
+Player2's turn:
+what row would you like?
+1
+what column would you like?
+0
+XO~
+OXX
+~~O
+Player1's turn:
+what row would you like?
+2
+what column would you like?
+0
+XO~
+OXX
+X~O
+Player2's turn:
+what row would you like?
+0
+what column would you like?
+2
+XOO
+OXX
+X~O
+Player1's turn:
+what row would you like?
+2
+what column would you like?
+1
+XOO
+OXX
+XXO

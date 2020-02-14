@@ -69,8 +69,23 @@ void GetPlayerChoice(int *choice){
 
 int main(int argc, char const *argv[]) {
   int **board = CreateBoard();
+	
+  int turn_count = 0;
+	
+  //The choice array is used to store user input
+  int *choice = new int[2];
   
-  DisplayBoard(board);
+  //uses turn count to run for 9 turns
+  while(turn_count < 9){
+	  int *choice = new int[2];
+	  DisplayBoard(board);
+	  //for 0 through 8 turn_count % 2 will return 0 for 0, 2, 4, 6, 8 aka player ones turn, and 1 for player two's turn
+	  //By adding one to this number we can accurately express who's turn it is
+	  std::cout << "Player" << (turn_count % 2) + 1<< "'s turn:" << std::endl;
+	  GetPlayerChoice(choice);
+	  PlaceMarker(choice, (turn_count % 2) + 1, board);
+	  turn_count++;
+  }
 
   return 0;
 }

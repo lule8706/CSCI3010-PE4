@@ -20,9 +20,18 @@ void DisplayBoard(int **board){
 	}
 }
 
+//Is passed a pointer to an array that holds the choices
+void GetPlayerChoice(int *choice){
+	int row,col;
+	std::cout << "what row would you like? " << std::endl;
+	std::cin >> choice[0];
+	std::cout << "what column would you like? " << std::endl;
+	std::cin >> choice[1];
+}
+
 int main(int argc, char const *argv[]) {
   int **board = CreateBoard();
-
+  
   DisplayBoard(board);
   return 0;
 }

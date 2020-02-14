@@ -45,9 +45,32 @@ void PlaceMarker(int *pos, int marker, int **board) {
   board[pos[0]][pos[1]] = marker;
 }
 
+//Is passed a pointer to an array that holds the choices
+void GetPlayerChoice(int *choice){
+	bool done = false;
+	while(!done){
+		done = true;
+		std::cout << "what row would you like? " << std::endl;
+		std::cin >> choice[0];
+		if((choice[0] > 2) | (choice[0] < 0)){
+			std::cout << "Please choose a row between 0 and 2" << std::endl;
+			done = false;
+		}
+		else{
+			std::cout << "what column would you like? " << std::endl;
+			std::cin >> choice[1];
+			if((choice[1] > 2) | (choice[1] < 0)){
+				std::cout << "Please choose a column between 0 and 2" << std::endl;
+				done = false;
+			}
+		}
+	}
+}
+
 int main(int argc, char const *argv[]) {
   int **board = CreateBoard();
-
+  
   DisplayBoard(board);
+
   return 0;
 }

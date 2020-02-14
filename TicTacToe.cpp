@@ -34,6 +34,17 @@ void DisplayBoard(int **board) {
   }
 }
 
+/**
+  Places the respective marker at the location in the function argument.
+
+  @param pos 2-element array containing position
+  @param marker Number code for marker
+  @param board Board to be changed
+*/
+void PlaceMarker(int *pos, int marker, int **board) {
+  board[pos[0]][pos[1]] = marker;
+}
+
 int main(int argc, char const *argv[]) {
   int **board = CreateBoard();
 

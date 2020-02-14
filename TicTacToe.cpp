@@ -10,6 +10,7 @@ int ** CreateBoard () {
   return answer;
 }
 
+
 void DisplayBoard(int **board){
 	//Iterates through the rows first, the colums so it can print out rows before endline
 	for(int row = 0; row < 3; row++){

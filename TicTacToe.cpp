@@ -1,8 +1,10 @@
+#include <iostream>
+
 int ** CreateBoard () {
   int **answer = new int*[3];
 
   for (int i = 0; i < 3; i++) {
-    answer[i] = new int[3];
+	  answer[i] = new int[3];
   }
 
   return answer;
@@ -35,5 +37,6 @@ void DisplayBoard(int **board) {
 int main(int argc, char const *argv[]) {
   int **board = CreateBoard();
 
+  DisplayBoard(board);
   return 0;
 }
